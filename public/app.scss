@@ -1,6 +1,66 @@
 * {
   box-sizing: border-box;
 }
+body,
+input,
+textarea,
+button {
+  font-family: courier;
+  border-radius: 9px;
+  border: 0;
+}
+#main {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-rows: 400px;
+  grid-template-columns: 1fr 400px 1fr;
+  grid-gap: 1em;
+}
+#encryptor {
+  grid-column: 1;
+  background: maroon;
+  border-radius: 9px;
+  padding: 1em;
+  text-align: center;
+  display: grid;
+}
+#click1 {
+  background: mediumseagreen;
+  color: maroon;
+  border-radius: 9px;
+  border: 0;
+  padding: 1em;
+  font-size: 2em;
+}
+#click2 {
+  background: maroon;
+  color: mediumseagreen;
+  border-radius: 9px;
+  border: 0;
+  padding: 1em;
+  font-size: 2em;
+}
+#decryptor {
+  grid-column: 3;
+  background: mediumseagreen;
+  border-radius: 9px;
+  padding: 1em;
+  text-align: center;
+  display: grid;
+}
+#qrspot {
+  grid-column: 2;
+  grid-row: 1;
+  background: grey;
+}
+#share {
+  grid-column: 2;
+  grid-row: 2;
+}
+#encro {
+  grid-column: 1;
+  grid-row: 2;
+}
 
 #initgo {
   @import "colorsets/init.scss";

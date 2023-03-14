@@ -157,7 +157,7 @@ const onClickConnect = async () => {
 const checkUser = async () => {
   const S0X = await s0xData();
   // Is User
-  const isUser = await S0X.isU(user)
+  const isUser = await S0X.isUser(user)
     .then((res) => {
       console.log("// makeUser response : ", res);
       // action
@@ -169,7 +169,7 @@ const checkUser = async () => {
       return err;
     });
   if (isUser === true) {
-    const role = await S0X.getRole(user)
+    const role = await S0X.roles(user)
       .then((res) => {
         console.log("// makeUser response : ", Number(res._hex));
         // action
@@ -533,7 +533,7 @@ const onSubmitSignup = async (e) => {
     console.log(diasFTCH);
     let name = uName.value;
     const S0X = await s0xData();
-    const id = await S0X.isU(user);
+    const id = await S0X.isUser(user);
     rotate();
 
     const makeUser = await S0X.createUserAccount(JSON.stringify(diasFTCH), user, name)
@@ -680,7 +680,7 @@ const s0xLoad = async () => {
     return res;
   });
   // Get Role
-  const getRole = await S0X.getRole(_adr)
+  const getRole = await S0X.roles(_adr)
     .then((res) => {
       console.log("// makeUser response : ", res);
       // action
