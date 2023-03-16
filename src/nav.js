@@ -31,7 +31,6 @@ export const showAdmin = async () => {
   admin.removeEventListener("click", showAdmin);
   admin.addEventListener("click", fadeAdmin);
 };
-
 export const fadeAdmin = () => {
   console.log("// stop admin");
   const outs = setInterval(() => {

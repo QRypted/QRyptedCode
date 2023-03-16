@@ -17,9 +17,13 @@ import { sha256 } from "crypto-hash";
 import UAuth from "@uauth/js";
 import { create } from "underscore";
 import { stripZeros } from "ethers/lib/utils";
+import qrjs2 from "qrjs2";
+import CryptoJS from "crypto-js";
+
 import { logo, wallet, mwallet, btn, mbtn, app, mapp, net, mnet, about, mabout, team, mteam, service, mservice, MoBtn, MobNav, admin, madmin, imprint, mimprint, terms, mterms, contact, mcontact, closeMob, stage } from "./elements";
 import { mob_toggle, toggle, a, showAdmin, fadeAdmin, doAdmin, openLanding, openWallet, openApp, openNet, openAbout, openService, openTeam, openImprint, openTerms, openContact, goColor } from "./nav";
 import { roll, makeId, doCollection, showRarity } from "./rarity";
+import { makeQR } from "./qr";
 
 // globals
 let accounts;
